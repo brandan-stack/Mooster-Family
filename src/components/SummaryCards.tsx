@@ -1,14 +1,9 @@
+import { formatCurrency } from '@/utils/currency';
+
 interface SummaryCardsProps {
   totalIncome: number;
   totalExpenses: number;
   netBalance: number;
-}
-
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-ZA', {
-    style: 'currency',
-    currency: 'ZAR',
-  }).format(amount);
 }
 
 export default function SummaryCards({ totalIncome, totalExpenses, netBalance }: SummaryCardsProps) {
